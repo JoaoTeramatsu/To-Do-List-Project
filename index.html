@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>TO-DO LIST</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body onload="onloadTasks()">
+
+  <h1>Nova Tarefa:</h1>
+  <input id="task" type="text">
+
+  <input id="submit" type="button" value="Enviar" onclick="addTask()">
+  <input id="clear" type="button" value="Clear Storage" onclick="clearStorage()">
+  <br>
+  <h2>Tarefas</h2>
+
+  <ul id="lista">
+  </ul>
+
+</body>
+
+</html>

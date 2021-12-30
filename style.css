@@ -1,0 +1,32 @@
+#lista{
+    border:solid black 1px;
+    height: 500px;
+    width: 300px;
+}
+#submit{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px;
+}
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li{
+    border: solid black 1px;
+    display:table;
+
+    padding: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin-top: 2.5%;
+    margin-bottom: 5%;
+    background-color: white;
+}
