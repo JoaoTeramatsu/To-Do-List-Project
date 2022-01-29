@@ -14,13 +14,17 @@
     padding: 10px;
 }
 
+#removeButton{
+    display: hover;
+}
+
 body{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 li{
     border: solid black 1px;
-    display:table;
+    display: inline-block;
 
     padding: 1px;
     padding-left: 20px;

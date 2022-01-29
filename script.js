@@ -21,15 +21,28 @@ function onloadTasks() {
 function addTask() {
     //salva a tarefa no localStorage
     let taskName = document.getElementById('task').value;
-    let newTask = taskName
-    localStorage.setItem("Tarefa " + JSON.stringify(localStorage.length + 1), newTask)
+    let newTask = taskName;
+    localStorage.setItem("Tarefa " + JSON.stringify(localStorage.length + 1), newTask);
 
     //Cria Tarefa na Lista de Tarefas  
-    var newLi = document.createElement("li");
-    var liContent = document.createTextNode(taskName);
+    let newLi = document.createElement("li");
+    let liContent = document.createTextNode(taskName);
     newLi.appendChild(liContent);
-    let lista = document.getElementById("lista");
+    //Cria Botão para excluir tarefa
+    let newButton = document.createElement("input");
+    newButton.type = "button";
+    newButton.value = "X";
+    newButton.id  = "removeButton"
+    //Função que supostamente apagaria tarefa
+    newButton.onclick = function removeItem(){
+        console.log("ainda não sei fazer isso");
+    }
+    let br = document.createElement("br");
+    //Joga no HTML tudo criado até então
+    var lista = document.getElementById("lista");
     lista.appendChild(newLi);
+    lista.appendChild(newButton);
+    lista.appendChild(br);
 
     console.log(localStorage)
 }
@@ -40,3 +53,4 @@ function clearStorage() {
 }
 //printa localStorage quando inicia página
 console.log(localStorage);
+
