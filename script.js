@@ -6,7 +6,7 @@ function onloadTasks() {
     while (i--) {
         let taskName = localStorage.getItem(keys[i]);
 
-        let li = document.createElement("li");
+        let li = document.createElement("li");  
 
         let liContent = document.createTextNode(taskName);
         li.appendChild(liContent);
@@ -39,7 +39,7 @@ function addTask() {
     }
     let br = document.createElement("br");
     //Joga no HTML tudo criado até então
-    var lista = document.getElementById("lista");
+    let lista = document.getElementById("lista");
     lista.appendChild(newLi);
     lista.appendChild(newButton);
     lista.appendChild(br);
@@ -48,6 +48,11 @@ function addTask() {
 }
 //Função para apagar cache do localStorage
 function clearStorage() {
+    //apaga os elementos HTML criados dentro da lista 
+    const lista = document.getElementById("lista")
+    while (lista.firstChild) {
+    lista.firstChild.remove()
+}
     localStorage.clear();
     console.log(localStorage);
 }
